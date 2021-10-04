@@ -1,0 +1,11 @@
+.place__like {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    z-index: 3;
+    transition: ease-in .3s;
+}
+
+.place__like:hover {
+    opacity: .5;
+}
