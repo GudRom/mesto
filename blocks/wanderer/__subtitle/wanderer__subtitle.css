@@ -1,17 +1,15 @@
 .wanderer__subtitle {
     font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
     font-size: 18px;
     line-height: 1.22;
     color: #fff;
-    margin: 10px 0 0 0;
+    margin: 10px 0 0 30px;
 }
 
 @media screen and (max-width: 424px) {
     .wanderer__subtitle {
         font-size: 14px;
         text-align: center;
-        margin-top: 14px;
+        margin: 14px 0 0 0;
     }
 }

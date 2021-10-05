@@ -1,10 +1,9 @@
 .place__title {
     font-family: Inter;
-    font-style: normal;
     font-weight: 900;
     font-size: 24px;
     line-height: 1.21;
-    max-width: 170px;
+    max-width: 190px;
     margin-top: 25px;
     margin-left: 21px;
     text-overflow: ellipsis;

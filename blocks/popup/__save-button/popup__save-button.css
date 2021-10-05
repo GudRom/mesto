@@ -8,16 +8,20 @@
     border: none;
     border-radius: 2px;
     min-height: 50px;
-    margin-top: 18px;
+    margin-top: 10px;
     transition: ease-in-out .4s;
+    padding: 0;
 }
 
 .popup__save-button:hover {
     opacity: .8;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
     .popup__save-button {
-        margin-top: 15px;
+        margin-top: 8px;
+        min-height: 46px;
+        font-size: 14px;
     }
 }

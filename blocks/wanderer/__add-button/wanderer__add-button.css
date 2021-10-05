@@ -13,6 +13,7 @@
     background-repeat: no-repeat;
     background-position: center;
     transition: ease-in-out .4s;
+    cursor: pointer;
 }
 
 .wanderer__add-button:hover {
@@ -21,7 +22,7 @@
 
 @media screen and (max-width: 680px) {
     .wanderer__add-button {
-        margin-top: 36px;
+        margin-top: 31px;
         width: 100%;
     }
 }

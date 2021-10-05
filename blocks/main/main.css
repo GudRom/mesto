@@ -9,3 +9,9 @@
         margin: 0 19px;
     }
 }
+
+@media screen and (max-width: 424px) {
+    .main {
+        max-width: 282px;
+    }
+}

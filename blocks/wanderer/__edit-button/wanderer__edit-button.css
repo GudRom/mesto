@@ -14,6 +14,7 @@
     align-self: center;
     border-radius: 2px;
     transition: ease-in-out .4s;
+    cursor: pointer;
 }
 
 .wanderer__edit-button:hover {
