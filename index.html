@@ -20,95 +20,79 @@
     </header>
 
     <main class="main">
-        <div class="wanderer">
+        <section class="wanderer">
             <div class="wanderer__author">
                 <img class="wanderer__avatar" src="./images/image.png" alt="аватар">
                 <div class="wanderer__info">
                     <div class="wanderer__title">
                         <h1 class="wanderer__name">Жак-Ив Кусто</h1>
-                        <button class="wanderer__edit-button"></button>
+                        <button type="button" class="wanderer__edit-button"></button>
                     </div>
                     <p class="wanderer__subtitle">Исследователь океана</p>
                 </div>
             </div>
-            <button class="wanderer__add-button"></button>
-        </div>
+            <button type="button" class="wanderer__add-button"></button>
+        </section>
 
-        <ul class="place">
-            <li class="place__box">
-                <img class="place__photo" src="./images/fedor-shlyapnikov-_VwRu2a8MZg-unsplash.jpg" alt="каньон">
-                <div class="place__info">
-                    <h2 class="place__title">Сулакский Каньон</h2>
-                    <div class="place__like-box">
-                        <img class="place__like place__like_disable" src="./images/Union.svg" alt="лайк">
-                        <img class="place__like" src="./images/Group.svg" alt="лайк">
+        <section class="place">
+            <ul class="place__boxes">
+                <li class="place__box">
+                    <img class="place__photo" src="./images/fedor-shlyapnikov-_VwRu2a8MZg-unsplash.jpg" alt="каньон">
+                    <div class="place__info">
+                        <h2 class="place__title">Сулакский Каньон</h2>
+                        <button class="place__like place__like_type_off" type="button"></button>
                     </div>
-                </div>
-            </li>
-            <li class="place__box">
-                <img class="place__photo" src="./images/kirill-pershin-1404681-unsplash.png" alt="рассвет">
-                <div class="place__info">
-                    <h2 class="place__title">Гора Эльбрус</h2>
-                    <div class="place__like-box">
-                        <img class="place__like place__like_disable" src="./images/Union.svg" alt="лайк">
-                        <img class="place__like" src="./images/Group.svg" alt="лайк">
+                </li>
+                <li class="place__box">
+                    <img class="place__photo" src="./images/kirill-pershin-1404681-unsplash.png" alt="рассвет">
+                    <div class="place__info">
+                        <h2 class="place__title">Гора Эльбрус</h2>
+                        <button class="place__like place__like_type_off" type="button"></button>
                     </div>
-                </div>
-            </li>
-            <li class="place__box">
-                <img class="place__photo" src="./images/marina-bunto-t49I6mzr_uE-unsplash.jpg" alt="куршская коса">
-                <div class="place__info">
-                    <h2 class="place__title">Куршская коса</h2>
-                    <div class="place__like-box">
-                        <img class="place__like place__like_disable" src="./images/Union.svg" alt="лайк">
-                        <img class="place__like" src="./images/Group.svg" alt="лайк">
+                </li>
+                <li class="place__box">
+                    <img class="place__photo" src="./images/marina-bunto-t49I6mzr_uE-unsplash.jpg" alt="куршская коса">
+                    <div class="place__info">
+                        <h2 class="place__title">Куршская коса</h2>
+                        <button class="place__like place__like_type_off" type="button"></button>
                     </div>
-                </div>
-            </li>
-            <li class="place__box">
-                <img class="place__photo" src="./images/nikolay-vorobyev-sE3fZrOFBxk-unsplash.jpg"
-                    alt="природа карелии">
-                <div class="place__info">
-                    <h2 class="place__title">Суоярви</h2>
-                    <div class="place__like-box">
-                        <img class="place__like place__like_disable" src="./images/Union.svg" alt="лайк">
-                        <img class="place__like" src="./images/Group.svg" alt="лайк">
+                </li>
+                <li class="place__box">
+                    <img class="place__photo" src="./images/nikolay-vorobyev-sE3fZrOFBxk-unsplash.jpg"
+                        alt="природа карелии">
+                    <div class="place__info">
+                        <h2 class="place__title">Суоярви</h2>
+                        <button class="place__like place__like_type_off" type="button"></button>
                     </div>
-                </div>
-            </li>
-            <li class="place__box">
-                <img class="place__photo" src="./images/yaroslav-chaadaev-J7v7lw_zA3U-unsplash.jpg" alt="як">
-                <div class="place__info">
-                    <h2 class="place__title">Домбай</h2>
-                    <div class="place__like-box">
-                        <img class="place__like place__like_disable" src="./images/Union.svg" alt="лайк">
-                        <img class="place__like" src="./images/Group.svg" alt="лайк">
+                </li>
+                <li class="place__box">
+                    <img class="place__photo" src="./images/yaroslav-chaadaev-J7v7lw_zA3U-unsplash.jpg" alt="як">
+                    <div class="place__info">
+                        <h2 class="place__title">Домбай</h2>
+                        <button class="place__like place__like_type_off" type="button"></button>
                     </div>
-                </div>
-            </li>
-            <li class="place__box">
-                <img class="place__photo" src="./images/anton-maksimov-juvnsky-dYKV86-KDco-unsplash.jpg"
-                    alt="просторы Карачаево-Черкессии">
-                <div class="place__info">
-                    <h2 class="place__title">Карачаево-Черкессия</h2>
-                    <div class="place__like-box">
-                        <img class="place__like place__like_disable" src="./images/Union.svg" alt="лайк">
-                        <img class="place__like" src="./images/Group.svg" alt="лайк">
+                </li>
+                <li class="place__box">
+                    <img class="place__photo" src="./images/anton-maksimov-juvnsky-dYKV86-KDco-unsplash.jpg"
+                        alt="просторы Карачаево-Черкессии">
+                    <div class="place__info">
+                        <h2 class="place__title">Карачаево-Черкессия</h2>
+                        <button class="place__like place__like_type_off" type="button"></button>
                     </div>
-                </div>
-            </li>
-        </ul>
-        <div class="popup">
+                </li>
+            </ul>
+        </section>
+        <section class="popup">
             <div class="popup__content">
-                <button class="popup__quit-button"></button>
-                <form class="popup__form">
-                    <label class="popup__form-label">Редактировать&nbsp;профиль</label>
-                    <input class="popup__form-text" type="text">
-                    <input class="popup__form-text" type="text">
-                    <button class="popup__save-button">Сохранить</button>
+                <button type="button" class="popup__quit-button"></button>
+                <h2 class="popup__title">Редактировать&nbsp;профиль</h2>
+                <form class="popup__form" name="popup">
+                    <input class="popup__form-text" type="text" name="input-name" required placeholder="Имя">
+                    <input class="popup__form-text" type="text" name="input-job" required placeholder="Род деятельности">
+                    <button class="popup__save-button" type="submit">Сохранить</button>
                 </form>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer class="footer">

@@ -2,28 +2,28 @@ const popup = document.querySelector('.popup');
 const quitButton = document.querySelector('.popup__quit-button');
 const editButton = document.querySelector('.wanderer__edit-button');
 const formPopup = document.querySelector('.popup__form');
-const textInput = formPopup.querySelectorAll('.popup__form-text');
+const inputName = formPopup.querySelector('[name=input-name]');
+const inputJob = formPopup.querySelector('[name=input-job]');
 const nameWanderer = document.querySelector('.wanderer__name');
 const jobWanderer = document.querySelector('.wanderer__subtitle');
 
-function popupOpen() {
+function openPopup() {
     popup.classList.add('popup_active')
+    inputName.value = nameWanderer.textContent;
+    inputJob.value = jobWanderer.textContent;
 }
 
-function popupClose() {
+function closePopup() {
     popup.classList.remove('popup_active')
 }
 
-
-editButton.addEventListener('click', popupOpen);
-
-quitButton.addEventListener('click', popupClose);
-
 function submitForm(event) {
     event.preventDefault();
-    nameWanderer.textContent = textInput[0].value;
-    jobWanderer.textContent = textInput[1].value;
-    popupClose();
+    nameWanderer.textContent = inputName.value;
+    jobWanderer.textContent = inputJob.value;
+    closePopup();
 }
 
+editButton.addEventListener('click', openPopup);
+quitButton.addEventListener('click', closePopup);
 formPopup.addEventListener('submit', submitForm);

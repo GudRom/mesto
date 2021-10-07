@@ -1,11 +1,10 @@
 .wanderer__title {
     display: flex;
-    min-width: 336px;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 @media screen and (max-width: 424px) {
     .wanderer__title {
-        min-width: 320px;
+        justify-content: center;
     }
 }
