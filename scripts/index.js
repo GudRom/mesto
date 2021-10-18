@@ -1,6 +1,6 @@
-const popupEditCard = document.querySelector('.popup__edit');
-const popupAddCard = document.querySelector('.popup__add');
-const popupEnlager = document.querySelector('.popup__enlager');
+const popupEditCard = document.querySelector('.popup_edit');
+const popupAddCard = document.querySelector('.popup_add');
+const popupEnlager = document.querySelector('.popup_enlager');
 const addButton = document.querySelector('.wanderer__add-button');
 const editButton = document.querySelector('.wanderer__edit-button');
 const formPopup = document.querySelector('.popup__form');
@@ -10,9 +10,9 @@ const nameWanderer = document.querySelector('.wanderer__name');
 const jobWanderer = document.querySelector('.wanderer__subtitle');
 const cardTemplate = document.querySelector('.template').content;
 const cardsBox = document.querySelector('.place__boxes');
-const quitPopupEdit = document.querySelector('.popup__close_edit');
-const quitPopupAdd = document.querySelector('.popup__close_add');
-const quitPopupEnlager = document.querySelector('.popup__close_enlager');
+const quitPopupEdit = document.querySelector('.popup_close_edit');
+const quitPopupAdd = document.querySelector('.popup_close_add');
+const quitPopupEnlager = document.querySelector('.popup_close_enlager');
 const formEditCard = document.querySelector('[name=edit-profile]');
 const formAddCard = document.querySelector('[name=add-card]');
 const inputTitle = document.querySelector('[name=input-title]');
@@ -44,7 +44,7 @@ const initialCards = [{
 ];
 
 function openPopup(elementPopup) {
-    if (elementPopup.classList.contains('popup__edit')) {
+    if (elementPopup.classList.contains('popup_edit')) {
         elementPopup.classList.add('popup_active');
         inputName.value = nameWanderer.textContent;
         inputJob.value = jobWanderer.textContent;
