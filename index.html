@@ -36,68 +36,55 @@
 
         <section class="place">
             <ul class="place__boxes">
-                <li class="place__box">
-                    <img class="place__photo" src="./images/fedor-shlyapnikov-_VwRu2a8MZg-unsplash.jpg" alt="каньон">
-                    <div class="place__info">
-                        <h2 class="place__title">Сулакский Каньон</h2>
-                        <button class="place__like" aria-label="Нравится" type="button"></button>
-                    </div>
-                </li>
-                <li class="place__box">
-                    <img class="place__photo" src="./images/kirill-pershin-1404681-unsplash.png" alt="рассвет">
-                    <div class="place__info">
-                        <h2 class="place__title">Гора Эльбрус</h2>
-                        <button class="place__like" aria-label="Нравится" type="button"></button>
-                    </div>
-                </li>
-                <li class="place__box">
-                    <img class="place__photo" src="./images/marina-bunto-t49I6mzr_uE-unsplash.jpg" alt="куршская коса">
-                    <div class="place__info">
-                        <h2 class="place__title">Куршская коса</h2>
-                        <button class="place__like" aria-label="Нравится" type="button"></button>
-                    </div>
-                </li>
-                <li class="place__box">
-                    <img class="place__photo" src="./images/nikolay-vorobyev-sE3fZrOFBxk-unsplash.jpg"
-                        alt="природа карелии">
-                    <div class="place__info">
-                        <h2 class="place__title">Суоярви</h2>
-                        <button class="place__like" aria-label="Нравится" type="button"></button>
-                    </div>
-                </li>
-                <li class="place__box">
-                    <img class="place__photo" src="./images/yaroslav-chaadaev-J7v7lw_zA3U-unsplash.jpg" alt="як">
-                    <div class="place__info">
-                        <h2 class="place__title">Домбай</h2>
-                        <button class="place__like" aria-label="Нравится" type="button"></button>
-                    </div>
-                </li>
-                <li class="place__box">
-                    <img class="place__photo" src="./images/anton-maksimov-juvnsky-dYKV86-KDco-unsplash.jpg"
-                        alt="просторы Карачаево-Черкессии">
-                    <div class="place__info">
-                        <h2 class="place__title">Карачаево-Черкессия</h2>
-                        <button class="place__like" aria-label="Нравится" type="button"></button>
-                    </div>
-                </li>
             </ul>
         </section>
-        <div class="popup">
-            <div class="popup__content">
-                <button type="button" aria-label="Закрыть" class="popup__quit-button"></button>
-                <h2 class="popup__title">Редактировать&nbsp;профиль</h2>
-                <form class="popup__form" name="edit-profile">
-                    <input class="popup__form-text" type="text" name="input-name" required placeholder="Имя">
-                    <input class="popup__form-text" type="text" name="input-job" required placeholder="Род деятельности">
-                    <button class="popup__save-button" type="submit">Сохранить</button>
-                </form>
-            </div>
-        </div>
     </main>
 
     <footer class="footer">
         <p class="footer__copyrights">&copy; 2020 Mesto Russia</p>
     </footer>
+
+    <div class="popup popup__edit">
+        <div class="popup__content">
+            <button type="button" aria-label="Закрыть" class="popup__quit-button popup__close_edit"></button>
+            <h2 class="popup__title">Редактировать&nbsp;профиль</h2>
+            <form class="popup__form" name="edit-profile">
+                <input class="popup__form-text" type="text" name="input-name" required placeholder="Имя">
+                <input class="popup__form-text" type="text" name="input-job" required placeholder="Род деятельности">
+                <button class="popup__save-button" type="submit">Сохранить</button>
+            </form>
+        </div>
+    </div>
+    <div class="popup popup__add">
+        <div class="popup__content">
+            <button type="button" aria-label="Закрыть" class="popup__quit-button popup__close_add"></button>
+            <h2 class="popup__title">Новое&nbsp;место</h2>
+            <form class="popup__form" name="add-card">
+                <input class="popup__form-text" type="text" name="input-title" required placeholder="Название">
+                <input class="popup__form-text" type="text" name="input-url" required placeholder="Ссылка на картинку">
+                <button class="popup__save-button" type="submit">Сохранить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup popup__enlager">
+        <div class="popup__image-box">
+            <img class="popup__image">
+            <button type="button" aria-label="Закрыть" class="popup__quit-button popup__close_enlager"></button>
+            <h2 class="popup__caption"></h2>
+        </div>
+    </div>
+
+    <template class="template">
+        <li class="place__box">
+            <img class="place__photo">
+            <div class="place__info">
+                <h2 class="place__title"></h2>
+                <button class="place__like" aria-label="Нравится" type="button"></button>
+            </div>
+            <button type="button" class="place__delete" aria-label="Удалить"></button>
+        </li>
+    </template>
     <script src="./scripts/index.js"></script>
 </body>
 
