@@ -48,10 +48,14 @@ const initialCards = [{
 
 function openPopup(elementPopup) {
     elementPopup.classList.add('popup_active');
+    elementPopup.addEventListener('mouseup', closeByClickPopup);
+    document.addEventListener('keydown', escapePopup);
 }
 
 function closePopup(elementPopup) {
     elementPopup.classList.remove('popup_active');
+    elementPopup.removeEventListener('mouseup', closeByClickPopup);
+    document.removeEventListener('keydown', escapePopup);
 }
 
 function setValueWandererPopup() {
@@ -100,7 +104,6 @@ function escapePopup(evt) {
     if (evt.key === ESC_CODE) {
         const activePopup = document.querySelector('.popup_active');
         closePopup(activePopup);
-        evt.target.removeEventListener('keydown', escapePopup);
     }
 }
 
@@ -108,7 +111,6 @@ function closeByClickPopup(evt) {
     if (evt.target.classList.contains('popup') || evt.target.classList.contains('popup__quit-button')) {
         const activePopup = document.querySelector('.popup_active');
         closePopup(activePopup);
-        evt.target.removeEventListener('mouseup', closeByClickPopup);
     }
 }
 
@@ -131,7 +133,7 @@ function setImage(evt) {
 }
 
 function enlageImage(evt) {
-    if(evt.target.classList.contains('place__photo')){
+    if (evt.target.classList.contains('place__photo')) {
         console.log(evt.target);
         setImage(evt);
         openPopup(popupEnlager);
@@ -152,9 +154,6 @@ addButton.addEventListener('click', (evt) => {
 cardsBox.addEventListener('click', clickLike);
 cardsBox.addEventListener('click', removeCard);
 cardsBox.addEventListener('click', enlageImage);
-
-document.addEventListener('mouseup', closeByClickPopup);
-document.addEventListener('keydown', escapePopup);
 
 formEditCard.addEventListener('submit', submitForm);
 formAddCard.addEventListener('submit', submitAddForm);
