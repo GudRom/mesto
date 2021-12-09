@@ -11,9 +11,9 @@ class FormValidator {
 
     _checkInputValidity(inputElement) {
         if (!inputElement.validity.valid) {
-            this._showInputError(inputElement, this._formName, this._config);
+            this._showInputError(inputElement);
         } else {
-            this._hideInputError(inputElement, this._formName, this._config);
+            this._hideInputError(inputElement);
         }
     }
 
@@ -38,17 +38,17 @@ class FormValidator {
 
     _setEventListeners() {
         this._formName.addEventListener('submit', this._handleSubmit);
-        this._formName.addEventListener('input', () => this._setSaveButtonState(this._formName, this._config));
+        this._formName.addEventListener('input', () => this._setSaveButtonState());
         const inputs = [...this._formName.querySelectorAll(this._inputSelector)];
         inputs.forEach(inputElement => {
-            inputElement.addEventListener('input', () => this._checkInputValidity(inputElement, this._formName, this._config))
+            inputElement.addEventListener('input', () => this._checkInputValidity(inputElement))
         });
-        this._setSaveButtonState(this._formName, this._config);
+        this._setSaveButtonState();
     }
 
     enableValidation() {
         const forms = [...document.querySelectorAll(this._formSelector)];
-        forms.forEach((form) => this._setEventListeners(form, this._config));
+        forms.forEach((form) => this._setEventListeners(form));
     }
 
     _handleSubmit =(evt) =>{

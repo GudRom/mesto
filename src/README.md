@@ -11,12 +11,10 @@
 Русскому миру - русский [ИнстаграмЪ](https://gudrom.github.io/mesto/)!
 Сайт и его файловая структура созданы по БЭМ-методологии, а также сайт имеет адптивную верстку, что позволит комфортно воспользоваться им на любом устройстве.
 Проект разработан в рамках обучения в Яндекс.Практикум. 
-V1.1 - Больше попапов, больше возможностей.
 
 **Figma**
 
-* [Ссылка на 1 часть макета в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=28212%3A155)
-* [Ссылка на 2 часть макета в Figma](https://www.figma.com/file/bjyvbKKJN2naO0ucURl2Z0/JavaScript.-Sprint-5?node-id=0%3A1)
+* [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=28212%3A155)
 
 **Использованные технологии**
 
