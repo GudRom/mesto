@@ -7,7 +7,9 @@ import {
     editButton,
     addButton,
     formAddCard,
-    formEditCard
+    formEditCard,
+    inputName,
+    inputJob
 } from "../utils/constants.js";
 import Card from "./Card.js";
 import FormValidator from "./FormValidator.js";
@@ -53,12 +55,16 @@ popupWithEditForm.setEventListeners();
 popupWithImage.setEventListeners();
 
 editButton.addEventListener('click', () => {
-    userInfo.getUserInfo();
+    const userInfoObj = userInfo.getUserInfo();
+    inputName.value = userInfoObj.name;
+    inputJob.value = userInfoObj.info;
+    editFormValidator.resetValidation();
     popupWithEditForm.open();
 });
 
 
 addButton.addEventListener('click', () => {
+    addFormValidator.resetValidation();
     popupWithAddForm.open();
 });
 

@@ -1,5 +1,3 @@
-import { inputName, inputJob } from "../utils/constants.js";
-
 export default class UserInfo {
     constructor({name, info}) {
         this._userName = document.querySelector(name);
@@ -9,15 +7,15 @@ export default class UserInfo {
     // метод, возвращающий объект с данными пользователя
     getUserInfo() {
         const userListInfo = {
-            name: inputName.value = this._userName.textContent,
-            info: inputJob.value = this._userInfo.textContent
+            name: this._userName.textContent,
+            info: this._userInfo.textContent
         };
         return userListInfo;
     }
 
     // метод, принимающий новые данные пользователя и добавляет их на страницу
-    setUserInfo() {
-        this._userName.textContent = inputName.value;
-        this._userInfo.textContent = inputJob.value;
+    setUserInfo({name, info}) {
+        this._userName.textContent = name;
+        this._userInfo.textContent = info;
     }
 }

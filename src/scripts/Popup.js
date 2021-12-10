@@ -3,6 +3,7 @@ import {ESC_CODE} from '../utils/constants.js';
 export default class Popup {
     constructor(popupSelector){
         this._popup = document.querySelector(popupSelector);
+        this._handleEscClose = this._handleEscClose.bind(this);
     }
 
     // метод открытия попапа

@@ -6,7 +6,6 @@ export default class Card {
         this._name = name;
         this._openPopupWithImage = openPopupWithImage.bind(this);
         this._remove = this._remove.bind(this);
-        console.dir(this._link);
     }
 
     _getTemplate() {
@@ -27,10 +26,14 @@ export default class Card {
         this._element.querySelector(this._config.photoSelector).setAttribute('src', this._link);
         this._element.querySelector(this._config.photoSelector).setAttribute('alt', this._name);
         this._element.querySelector(this._config.titleSelector).textContent = this._name;
+        this._setEventListeners();
+        return this._element;
+    }
+
+    _setEventListeners = () => {
         this._element.querySelector(this._config.likeSelector).addEventListener('click', this._likeCard);
         this._element.querySelector(this._config.deleteSelector).addEventListener('click', this._remove);
         this._element.querySelector(this._config.photoSelector).addEventListener('click', this._handleCardClick);
-        return this._element;
     }
 
     _likeCard = (evt) => {
