@@ -47,8 +47,7 @@ export default class FormValidator {
     }
 
     enableValidation() {
-        const forms = [...document.querySelectorAll(this._formSelector)];
-        forms.forEach((form) => this._setEventListeners(form));
+        this._setEventListeners();
     }
 
     _handleSubmit =(evt) =>{
