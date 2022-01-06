@@ -21,7 +21,13 @@
     <main class="main">
         <section class="wanderer">
             <div class="wanderer__author">
-                <img class="wanderer__avatar" src="<%=require('./images/image.png')%>" alt="аватар">
+                <div class="wanderer__avatar-box">
+                    <div class="wanderer__overlay">
+                        <img class="wanderer__edit-avatar" src="<%=require('./images/Edit-Avatar.svg')%>"
+                            alt="Редактировать аватар">
+                    </div>
+                    <img class="wanderer__avatar" src="<%=require('./images/image.png')%>" alt="аватар">
+                </div>
                 <div class="wanderer__info">
                     <div class="wanderer__title">
                         <h1 class="wanderer__name">Жак-Ив Кусто</h1>
@@ -48,9 +54,11 @@
             <button type="button" aria-label="Закрыть" class="popup__quit-button popup__close-edit"></button>
             <h2 class="popup__title">Редактировать&nbsp;профиль</h2>
             <form class="popup__form" name="edit-profile" novalidate>
-                <input class="popup__form-text" type="text" name="name" id="input-name" required placeholder="Имя" minlength="2" maxlength="40">
+                <input class="popup__form-text" type="text" name="name" id="input-name" required placeholder="Имя"
+                    minlength="2" maxlength="40">
                 <span class="popup__input-error" id="input-name-error"></span>
-                <input class="popup__form-text" type="text" name="info" id="input-job" required placeholder="Род деятельности" minlength="2" maxlength="200">
+                <input class="popup__form-text" type="text" name="about" id="input-job" required
+                    placeholder="Род деятельности" minlength="2" maxlength="200">
                 <span class="popup__input-error" id="input-job-error"></span>
                 <button class="popup__save-button" type="submit">Сохранить</button>
             </form>
@@ -61,9 +69,11 @@
             <button type="button" aria-label="Закрыть" class="popup__quit-button popup__close-add"></button>
             <h2 class="popup__title">Новое&nbsp;место</h2>
             <form class="popup__form" name="add-card" novalidate>
-                <input class="popup__form-text" type="text" name="name" id="input-title" required placeholder="Название" minlength="2" maxlength="30" autocomplete="off">
+                <input class="popup__form-text" type="text" name="name" id="input-title" required placeholder="Название"
+                    minlength="2" maxlength="30" autocomplete="off">
                 <span class="popup__input-error" id="input-title-error"></span>
-                <input class="popup__form-text" type="url" name="link" id="input-url" required placeholder="Ссылка на картинку">
+                <input class="popup__form-text" type="url" name="link" id="input-url" required
+                    placeholder="Ссылка на картинку">
                 <span class="popup__input-error" id="input-url-error"></span>
                 <button class="popup__save-button" type="submit">Сохранить</button>
             </form>
@@ -78,12 +88,38 @@
         </div>
     </div>
 
+    <div class="popup popup_delete">
+        <div class="popup__content">
+            <button type="button" aria-label="Закрыть" class="popup__quit-button popup__close-delete-box"></button>
+            <h2 class="popup__title">Вы&nbsp;уверены?</h2>
+            <form class="popup__form" name="delete-card" novalidate>
+                <button class="popup__save-button" type="submit">Да</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup popup_edit-avatar">
+        <div class="popup__content">
+            <button type="button" aria-label="Закрыть" class="popup__quit-button popup__close-change-avatar"></button>
+            <h2 class="popup__title">Обновить аватар</h2>
+            <form class="popup__form" name="edit-avatar" novalidate>
+                <input class="popup__form-text" type="url" name="avatar" id="input-url-avatar" required
+                    placeholder="Ссылка на аватар">
+                <span class="popup__input-error" id="input-url-avatar-error"></span>
+                <button class="popup__save-button" type="submit">Сохранить</button>
+            </form>
+        </div>
+    </div>
+
     <template class="template">
         <li class="place__box">
             <img class="place__photo">
             <div class="place__info">
                 <h2 class="place__title"></h2>
-                <button class="place__like" aria-label="Нравится" type="button"></button>
+                <div class="place__likebox">
+                    <button class="place__like" aria-label="Нравится" type="button"></button>
+                    <span class="place__count-like"></span>
+                </div>
             </div>
             <button type="button" class="place__delete" aria-label="Удалить"></button>
         </li>

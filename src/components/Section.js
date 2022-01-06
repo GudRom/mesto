@@ -1,9 +1,7 @@
 export default class Section {
     constructor({
-        items,
         renderer
     }, cardSelector) {
-        this._renderedItems = items;
         this._renderer = renderer;
         this._container = document.querySelector(cardSelector);
     }
@@ -18,8 +16,8 @@ export default class Section {
     }
     
     // метод отрисовки всех элементов
-    renderItems() {
-        this._renderedItems.forEach(item => {
+    renderItems(items) {
+        items.forEach(item => {
             return this._renderer(item);
         });
     }
