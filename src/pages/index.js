@@ -50,9 +50,11 @@ const createCardItem = (item) => {
             popupDeleteCard.open();
             popupDeleteCard.setSubmit(() => {
                 api.deleteCard(item._id)
-                    .then(card.remove())
+                    .then(() => {
+                        card.remove();
+                        popupDeleteCard.close()
+                    })
                     .catch(error => console.log(error))
-                    .finally(() => popupDeleteCard.close())
             })
         },
         likeCard: (id) => {
@@ -84,12 +86,12 @@ const popupWithAddForm = new PopupWithForm(config, {
     submiter: (input) => {
         renderLoading(true);
         api.addNewCard(input)
-            .then(res => cardList.prependItem(createCardItem(res)))
-            .catch(error => console.log(error))
-            .finally(() => {
+            .then(res => {
+                cardList.prependItem(createCardItem(res));
                 renderLoading(false);
                 popupWithAddForm.close()
             })
+            .catch(error => console.log(error))
     }
 }, config.popupAddCardSelector);
 
@@ -98,13 +100,11 @@ const popupWithEditForm = new PopupWithForm(config, {
         renderLoading(true);
         api.editProfile(data)
             .then((res) => {
-                userInfo.setUserInfo(res)
-            })
-            .catch(error => console.log(error))
-            .finally(() => {
+                userInfo.setUserInfo(res);
                 renderLoading(false);
                 popupWithEditForm.close()
             })
+            .catch(error => console.log(error))
     }
 }, config.popupEditCardSelector);
 
@@ -113,13 +113,11 @@ const popupWithEditAvatarForm = new PopupWithForm(config, {
         renderLoading(true);
         api.editAvatar(data)
             .then((res) => {
-                userInfo.setUserInfo(res)
-            })
-            .catch(error => console.log(error))
-            .finally(() => {
+                userInfo.setUserInfo(res);
                 renderLoading(false);
                 popupWithEditAvatarForm.close()
             })
+            .catch(error => console.log(error))
     }
 }, config.popupEditAvatarSelector);
 
